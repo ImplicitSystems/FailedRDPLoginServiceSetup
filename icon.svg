@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120mm"
+   height="120mm"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="icon.jpg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.2643924"
+     inkscape:cx="207.11958"
+     inkscape:cy="226.77165"
+     inkscape:window-width="1350"
+     inkscape:window-height="1230"
+     inkscape:window-x="260"
+     inkscape:window-y="131"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1145" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-43.000001,-82.999998)">
+    <g
+       id="g1145"
+       transform="translate(26.439769,47.078676)">
+      <circle
+         style="fill:#ffbc20;stroke-width:0.264583"
+         id="path788"
+         cx="39.331188"
+         cy="94.854912"
+         r="7.5189877" />
+      <circle
+         style="fill:#ffbc20;stroke-width:0.264583"
+         id="path788-5"
+         cx="67.483238"
+         cy="62.176239"
+         r="7.5189877" />
+      <circle
+         style="fill:#ffbc20;stroke-width:0.264583"
+         id="path788-2"
+         cx="95.635284"
+         cy="75.479065"
+         r="7.5189877" />
+      <circle
+         style="fill:#ffbc20;stroke-width:0.264583"
+         id="path788-7"
+         cx="123.78733"
+         cy="51.765339"
+         r="7.5189877" />
+      <rect
+         style="fill:#ffbc20;stroke-width:0.264583"
+         id="rect1000"
+         width="2.0243428"
+         height="116.83349"
+         x="17.929893"
+         y="37.594936" />
+      <rect
+         style="fill:#ffbc20;stroke-width:0.264583"
+         id="rect1000-9"
+         width="2.0243428"
+         height="116.83349"
+         x="152.38805"
+         y="-134.79773"
+         transform="rotate(90)" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path788"
+         id="use1075" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path788-5"
+         id="use1077" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path788-2"
+         id="use1079" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path788-7"
+         id="use1081" />
+      <rect
+         style="fill:#ffbc20;stroke-width:0.279093"
+         id="use1087"
+         width="9.254138"
+         height="51.484905"
+         x="91.008217"
+         y="89.424606" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#rect1000"
+         id="use1091" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#rect1000-9"
+         id="use1093" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use1075"
+         id="use1095" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use1077"
+         id="use1097" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use1079"
+         id="use1099" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use1081"
+         id="use1101" />
+      <rect
+         style="fill:#ffbc20;stroke-width:0.227453"
+         id="use1103"
+         width="9.254138"
+         height="34.194744"
+         x="34.704121"
+         y="107.0653" />
+      <rect
+         style="fill:#ffbc20;stroke-width:0.31573"
+         id="use1105"
+         width="9.254138"
+         height="65.889"
+         x="62.856167"
+         y="75.254204" />
+      <rect
+         style="fill:#ffbc20;stroke-width:0.336911"
+         id="use1109"
+         width="9.254138"
+         height="75.026291"
+         x="119.16026"
+         y="66.000061" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use1091"
+         id="use1111"
+         transform="matrix(2.4430014,0,0,1,-25.872862,0)" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use1093"
+         id="use1113"
+         transform="matrix(1,0,0,2.4430014,0,-222.8173)" />
+    </g>
+  </g>
+</svg>

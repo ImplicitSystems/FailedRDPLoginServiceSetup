@@ -1,0 +1,106 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util" xmlns:NetFX="http://wixtoolset.org/schemas/v4/wxs/netfx" >
+	
+	<Package Name="FailedRDPLoginService" Language="1033" Version="1.0.0.0" Manufacturer="ImplicitSystems" 
+			 UpgradeCode="851532be-439f-4444-8f5e-43b8bb123abc" InstallerVersion="200">
+	
+		 
+		<!-- UI customization -->
+		<WixVariable Id="WixUIBannerBmp" Value="Images\BannerTop.bmp" />
+		<WixVariable Id="WixUIDialogBmp" Value="Images\Dialog.bmp" />
+		<WixVariable Id="InfoURL" Value="https://ImplicitSystems.com/Software/FailedRDPLoginService" />
+		
+		<!-- Define icons (ID should not be longer than 18 chars and must end with ".exe") -->
+		<Icon Id="Icon.exe" SourceFile="images\app.ico" />
+
+		<!-- Set properties for add/remove programs -->
+		<Property Id="ARPPRODUCTICON" Value="Icon.exe" />
+		<Property Id="ARPHELPLINK" Value="InfoURL" />
+		<Property Id="ARPNOREPAIR" Value="yes" Secure="yes" />      <!-- Remove repair -->
+		<Property Id="ARPNOMODIFY" Value="yes" Secure="yes" />      <!-- Remove modify -->
+	    
+			<UI>
+				<!-- Define the installer UI -->
+				<UIRef Id="WixUI" />
+			</UI>
+      
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+		<Property Id="WIXUI_SERVERS" Value="SERVERS" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed" />
+		
+			
+		<Feature Id="ProductFeature" Title="FailedRDPLoginService" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="ConfigFiles" />
+			<ComponentGroupRef Id="ServiceInstaller" />		
+		</Feature>		
+	</Package>
+
+	<!--Install Folder C:\Intelesense\DCMSServices\-->	
+	<Fragment>
+		<StandardDirectory Id="ProgramFiles6432Folder">
+			<Directory Id="CompanyFolder" Name="!(bind.Property.Manufacturer)">
+				<Directory Id="INSTALLFOLDER" Name="!(bind.Property.ProductName)" />
+			</Directory>
+		</StandardDirectory>
+	</Fragment>
+
+	<!--DEPENDENCY FILES-->
+	<Fragment>
+		<ComponentGroup Id="ConfigFiles" Directory="INSTALLFOLDER">
+
+			<Component Guid="60CB04BE-202F-A04B-EFBB-962CF4CE463B">
+				<File Source="$(var.FailedRDPLoginService.TargetDir)FailedRDPLoginService.exe.config" KeyPath="yes"/>
+			</Component>
+			
+		</ComponentGroup>			
+	</Fragment>
+
+	<!--DEPENDENCY FILES-->
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+				
+			<Component Id="ProductComponent" Guid="CE9046BE-202F-4A0B-EBEF-F42CC96E463A">
+				<!--<Shortcut Id="ApplicationStartMenuShortcut" 
+						Name="Polling Services"
+						Description="DCMS Polling Service"
+						Target="[#MyApplicationExeFileId]"
+						WorkingDirectory="APPLICATIONROOTDIRECTORY"/>-->
+				<!--<util:InternetShortcut Id="OnlineDocumentationShortcut"
+										Name="DCMS Online Documentation"
+										Target="http://ImplicitSystems.com/FailedRDPLoginService"/>-->
+				<RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+				<RegistryValue Root="HKCU" Key="Software\ImplicitSystems\FailedRDPLoginService" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+			</Component>
+
+		</ComponentGroup>
+	</Fragment>
+	
+	<!--SERVICE-->
+	<Fragment>
+		<ComponentGroup Id="ServiceInstaller" Directory="INSTALLFOLDER">
+			<Component Guid="F7E041AB-3227-4272-9C12-4A12685F30AF">
+				<File Id="_FailedRDPLoginService.exe" 
+						Source="$(var.FailedRDPLoginService.TargetDir)FailedRDPLoginService.exe" 
+						KeyPath="yes" />
+				
+				<ServiceInstall Id="ServiceInstaller" 
+								Type="ownProcess" 
+								Name="FailedRDPLoginService" 
+								DisplayName="Failed RDP Login Firewall Block Service" 
+								Description="A Windows Service that monitors the Event Logs for Failed Remote Logon Attempts and automatically adds the IP Address to a Windows Firewall rule." 
+								Start="auto" 
+								ErrorControl="normal" 
+								Account="LocalSystem" />
+				
+				<ServiceControl Id="StartService" 
+								Start="install" 
+								Stop="both" 
+								Remove="uninstall" 
+								Name="FailedRDPLoginService" 
+								Wait="yes" />
+			</Component>
+
+		</ComponentGroup>
+	</Fragment>
+</Wix>

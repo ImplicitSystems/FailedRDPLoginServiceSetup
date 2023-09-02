@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+
+		<UI Id="WixUI">
+			<TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+			<TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+			<TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+			<Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+			<Property Id="WixUI_Mode" Value="InstallDir" />
+			
+		<!--		<DialogRef Id="LicenseAgreement"/>
+		<DialogRef Id="ExitDlg" />
+			<DialogRef Id="DiskCostDlg" />
+			<DialogRef Id="ErrorDlg" />
+			<DialogRef Id="FatalError" />
+			<DialogRef Id="FilesInUse" />
+			<DialogRef Id="MsiRMFilesInUse" />
+			<DialogRef Id="PrepareDlg" />
+			<DialogRef Id="ProgressDlg" />
+			<DialogRef Id="ResumeDlg" />
+			<DialogRef Id="UserExit" />-->
+
+			<!--   Make sure to include custom dialogs in the installer database via a DialogRef command, 
+               especially if they are not included explicitly in the publish chain below -->
+			<!--
+			<DialogRef Id="ExitDlg" />-->
+
+		</UI>		
+
+		<!--<UIRef Id="WixUI_Common" />-->
+	</Fragment>
+</Wix>
